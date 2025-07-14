@@ -5,7 +5,7 @@ export default function Dashboard() {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/webhook/logs').then(res => setLogs(res.data));
+    axios.get('https://ticket-viewing-system-back-end.onrender.com/api/webhook/logs').then(res => setLogs(res.data));
   }, []);
 
   return (

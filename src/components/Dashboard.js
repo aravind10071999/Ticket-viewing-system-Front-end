@@ -22,14 +22,14 @@ export default function Dashboard() {
   };
 
   const fetchTickets = async () => {
-    const response = await axios.get('http://localhost:5000/api/freshdesk/tickets', {
+    const response = await axios.get('https://ticket-viewing-system-back-end.onrender.com/api/freshdesk/tickets', {
       headers: { apiKey, domain }
     });
     setTickets(response.data);
   };
 
   const fetchTicketDetails = async (id) => {
-    const response = await axios.get(`http://localhost:5000/api/freshdesk/ticket/${id}`, {
+    const response = await axios.get(`https://ticket-viewing-system-back-end.onrender.com/api/freshdesk/ticket/${id}`, {
       headers: { apiKey, domain }
     });
     setSelectedTicket(response.data);
